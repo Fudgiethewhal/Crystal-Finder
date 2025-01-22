@@ -85,7 +85,6 @@ class Program
     static void ViewCollection(Dictionary<string, List<Crystal>> collection)
     {
         Console.WriteLine("\nCrystal Collection:");
-
         if (collection.Count == 0)
         {
             Console.WriteLine("No crystals collected yet!");

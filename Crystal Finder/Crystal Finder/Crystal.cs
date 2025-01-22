@@ -1,35 +1,52 @@
-﻿namespace Crystal_Finder;
+﻿using System;
+using System.Collections.Generic;
 
-public class Crystal
+namespace Crystal_Finder
 {
-    public string Type { get; set; }
-    public string Description { get; set; }
-
-    public Crystal(string type, string description)
+    public class Crystal
     {
-        Type = type;
-        Description = description;
+        public string Type { get; set; }
+        public string Description { get; set; }
 
-        switch (choice)
-        { 
-            Console.WriteLine("1.Is this a Cubic crystal?");
-            Console.WriteLine("2. Is this a Tetragonal crystal?");
-            Console.WriteLine("3. Is this a Orthohombical crystal?");
-            Console.WriteLine("4. Is this a Monoclinic crystal?");
-            Console.WriteLine("5. Is this a Triclinic crystal?");
-            Console.WriteLine("6. Is this a Rhombohedral crystal?");
-            Console.WriteLine("7. Is this a Hexagonal crystal?");
-            Console.WriteLine("8. Not sure? No problem, you can record at a later time.");
-            Console.Write("9. Exit");
-           
+        private static readonly List<string> CrystalTypes = new List<string>
+        {
+            "Cubic", "Tetragonal", "Orthorhombic",
+            "Monoclinic", "Triclinic", "Rhombohedral",
+            "Hexagonal", "Not Sure"
+        };
 
-            string input = Console.ReadLine();
+        public Crystal(string type, string description)
+        {
+            Type = type;
+            Description = description;
         }
 
-    }
+        public static Crystal CreateFromUserInput()
+        {
+            Console.WriteLine("Choose a type: ");
+            for (int i = 0; i < CrystalTypes.Count; i++)
+            {
+                Console.WriteLine($"{i +1}. {CrystalTypes[i]}");
+            }
 
-    public override string ToString()
-    {
-        return $"{Type} - {Description}";
+            Console.Write("Enter your choice (1-8: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int choice) && choice >= 1 && choice <= CrystalTypes.Count)
+            {
+                string selectedType = CrystalTypes[choice - 1];
+                Console.WriteLine($"You selected: {selectedType}");
+                
+                Console.Write("Enter your description of the crystal: ");
+                string description = Console.ReadLine();
+                
+                return new Crystal(selectedType, description);
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. No crystal found.");
+                return null;
+            }
+        }
     }
 }
