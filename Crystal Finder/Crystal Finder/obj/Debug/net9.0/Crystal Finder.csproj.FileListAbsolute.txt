@@ -1,0 +1,14 @@
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.AssemblyInfoInputs.cache
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.AssemblyInfo.cs
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.csproj.CoreCompileInputs.cache
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\bin\Debug\net9.0\Crystal Finder.exe
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\bin\Debug\net9.0\Crystal Finder.deps.json
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\bin\Debug\net9.0\Crystal Finder.runtimeconfig.json
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\bin\Debug\net9.0\Crystal Finder.dll
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\bin\Debug\net9.0\Crystal Finder.pdb
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.dll
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\refint\Crystal Finder.dll
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.pdb
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.genruntimeconfig.cache
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\ref\Crystal Finder.dll
