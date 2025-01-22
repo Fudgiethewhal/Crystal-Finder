@@ -4,6 +4,17 @@ using Crystal_Finder;
 
 class Program
 {
+    private static readonly List<string> CrystalTypes = new List<string>
+    {
+        "Cubic",
+        "Tetragonal",
+        "Orthorhombic",
+        "Monoclinic",
+        "Triclinic",
+        "Rhombohedral",
+        "Hexagonal",
+        "Not Sure?"
+    };
     static void Main()
     { 
         Dictionary<string, List<Crystal>> crystalsCollection = new Dictionary<string, List<Crystal>>();
@@ -28,10 +39,10 @@ class Program
                     ViewCollection(crystalsCollection);
                     break;
                 case "3":
-                    Console.WriteLine("Goodbye!");
+                    Console.WriteLine("Exit");
                     return;
                 default:
-                    Console.WriteLine("Invalid choice, try again.");
+                    Console.WriteLine("Enter your choice: ");
                     break;
             }
         }
@@ -42,20 +53,34 @@ class Program
         Console.WriteLine("Enter Location:");
         string location = Console.ReadLine();
         
-        Console.WriteLine("Enter crystal: ");
-        string crystal = Console.ReadLine();
+        Console.WriteLine("Enter crystal type: ");
+        for (int i = 0; i < CrystalTypes.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {CrystalTypes[i]}");
+        }
+
+        Console.Write("Choose option: ");
+        if (!int.TryParse(Console.ReadLine(), out int choice) || choice <= 0 || choice > CrystalTypes.Count)
+        {
+            Console.WriteLine("Invalid input.");
+            return;
+        }
+
+        string type = CrystalTypes[choice - 1];
+        
+        Console.WriteLine("Enter description: ");
+        string description = Console.ReadLine();
+        
+        Crystal crystal = new Crystal(type, description);
 
         if (!collection.ContainsKey(location))
         {
-            collection[location] = new List<Crystal>();
+            collection.Add(location, new List<Crystal>());
         }
         
         collection[location].Add(crystal);
-        
-        Console.WriteLine($"Added {crystal} to {location} with a description of {Description}, which is a {type} of crystal.");
+        Console.WriteLine($"Added {crystal} to collection with a description of {description}, which is a type of {type}.");
     }
-
-    public static string Description { get; set; }
 
     static void ViewCollection(Dictionary<string, List<Crystal>> collection)
     {
@@ -63,14 +88,17 @@ class Program
 
         if (collection.Count == 0)
         {
-            Console.WriteLine("No crystal found!");
+            Console.WriteLine("No crystals collected yet!");
             return;
         }
 
         foreach (var location in collection)
         {
             Console.WriteLine($"Location: {location.Key}");
-            Console.WriteLine($"Crystals: " + string.Join(", ", location.Value));
+            foreach (var crystal in location.Value)
+            {
+                Console.WriteLine($" - {crystal}");
+            }
         }
     }
 }

@@ -2,6 +2,17 @@
 
 public class CrystalManager
 {
+    private List<string> CrystalTypes = new List<string>
+    {
+        "Cubic",
+        "Tetragonal",
+        "Orthorhombic",
+        "Monoclinic",
+        "Triclinic",
+        "Rhombohedral",
+        "Hexagonal",
+        "Not Sure?"
+    };
         public void AddCrystals(Dictionary<string, List<string>> collection)
         {
             Console.Write("Enter location: ");
