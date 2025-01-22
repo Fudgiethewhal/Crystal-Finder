@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Crystal_Finder;
 
 class Program
 {
     static void Main()
     { 
         Dictionary<string, List<string>> crystalsCollection = new Dictionary<string, List<string>>();
+        CrystalManager crystalManager = new CrystalManager();
 
         while (true)
         {

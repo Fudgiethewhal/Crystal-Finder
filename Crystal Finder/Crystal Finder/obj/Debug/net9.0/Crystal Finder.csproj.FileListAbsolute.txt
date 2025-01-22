@@ -12,3 +12,4 @@ C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\re
 C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.pdb
 C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.genruntimeconfig.cache
 C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\ref\Crystal Finder.dll
+C:\Users\15756\Crystal Locator\Crystal Finder\Crystal Finder\obj\Debug\net9.0\Crystal Finder.sourcelink.json
