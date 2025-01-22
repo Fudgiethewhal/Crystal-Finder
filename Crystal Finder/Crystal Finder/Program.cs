@@ -6,7 +6,7 @@ class Program
 {
     static void Main()
     { 
-        Dictionary<string, List<string>> crystalsCollection = new Dictionary<string, List<string>>();
+        Dictionary<string, List<Crystal>> crystalsCollection = new Dictionary<string, List<Crystal>>();
         CrystalManager crystalManager = new CrystalManager();
 
         while (true)
@@ -37,7 +37,7 @@ class Program
         }
     }
 
-    static void AddCrystals(Dictionary<string, List<string>> collection)
+    static void AddCrystals(Dictionary<string, List<Crystal>> collection)
     {
         Console.WriteLine("Enter Location:");
         string location = Console.ReadLine();
@@ -47,14 +47,17 @@ class Program
 
         if (!collection.ContainsKey(location))
         {
-            collection[location] = new List<string>();
+            collection[location] = new List<Crystal>();
         }
         
         collection[location].Add(crystal);
-        Console.WriteLine($"Added {crystal} to {location}!");
+        
+        Console.WriteLine($"Added {crystal} to {location} with a description of {Description}, which is a {type} of crystal.");
     }
 
-    static void ViewCollection(Dictionary<string, List<string>> collection)
+    public static string Description { get; set; }
+
+    static void ViewCollection(Dictionary<string, List<Crystal>> collection)
     {
         Console.WriteLine("\nCrystal Collection:");
 
