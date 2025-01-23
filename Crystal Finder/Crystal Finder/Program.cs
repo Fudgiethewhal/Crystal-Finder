@@ -94,7 +94,7 @@ class Program
         //Adds the new crystal to the list at the specified location
         collection[location].Add(crystal);
         //This will show that the crystal has been added.
-        Console.WriteLine($"Added {crystal} to collection with a description of {description}, which is a type of {type}.");
+        Console.WriteLine($"Added crystal to collection with a description of {description}, which is a type of {type}.");
     }
 
     static void ViewCollection(Dictionary<string, List<Crystal>> collection)
@@ -113,10 +113,6 @@ class Program
             //Loops through the list of crystals at each location
             // and displays them
             Console.WriteLine($"Location: {location.Key}");
-            foreach (var crystal in location.Value)
-            {
-                Console.WriteLine($" - {crystal}");
-            }
         }
     }
 }
