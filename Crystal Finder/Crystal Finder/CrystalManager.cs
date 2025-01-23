@@ -1,4 +1,7 @@
-﻿namespace Crystal_Finder;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Crystal_Finder;
 
 public class CrystalManager
 {

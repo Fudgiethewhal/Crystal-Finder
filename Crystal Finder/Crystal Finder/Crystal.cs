@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Crystal_Finder
+﻿namespace Crystal_Finder
 {
     public class Crystal
     {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Crystal Finder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9bcde94f33a867cc1043000ede505a8cdc30a08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+805c2d1c1439de545170b3d815181df5072faf00")]
 [assembly: System.Reflection.AssemblyProductAttribute("Crystal Finder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Crystal Finder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
