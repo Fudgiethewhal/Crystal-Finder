@@ -5,7 +5,7 @@ namespace Crystal_Finder;
 
 public class CrystalManager
 {
-    private List<string> CrystalTypes = new List<string>
+    public List<string> CrystalTypes = new List<string>
     {
         "Cubic",
         "Tetragonal",
